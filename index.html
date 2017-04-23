@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>个人简历</title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+  <style>
+
+	/* 定义辅助CSS来美化简历头部 */
+	body{
+	  font-family: 'microsoft yahei',Arial,sans-serif;
+	}
+
+	.cvheader{
+	  border-bottom: 1px solid #DFDFDF;
+	  padding-top:30px;
+	  padding-bottom:20px;
+	}
+
+	.cvheader h1{
+	  margin:0;
+	}
+
+	.address{
+	  background: #efb73e;
+	  color: #fff;
+	  padding: 10px 0;
+	}
+
+	/* 定义辅助CSS来美化简历主体 */
+
+	.cvbody{
+	  padding-top: 50px; 
+	}
+
+	.cbox{
+	  margin-bottom: 30px;
+	  color: #FFF;
+	  padding: 50px;
+	}
+
+	/* 定义cbox颜色 */
+	.green{
+	  background: #0099CC;
+	}
+  
+  .red{
+    background: #006699;
+  } 
+	
+  .orange{
+	  background: #305484;
+	}
+
+
+
+	.bbox{
+	  border: 1px solid #DFDFDF;
+	  border-radius: 5px;
+	  margin-bottom:30px;
+	  padding: 50px;
+	}
+
+	.footer{
+	  margin: 30px 0 30px;
+	  padding: 50px;
+	  background: #CCC;
+	  color: #FFF;
+	}
+</style>
+</head>
+<body>
+  <!-- 定义简历的头部 //-->
+
+<div class="container">
+  <div class="row cvheader">
+    <div class="col-lg-7 col-md-7 col-xs-12">
+      <!--  添加颜色//-->
+      <h1 class="text-primary">邓展图</h1>
+      <!--  添加图标 //-->
+      <p><span class="glyphicon glyphicon-paperclip"></span>应届生</p>
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-xs-12">
+      <div class="row">
+        
+        <div class="col-lg-4 col-md-4 col-xs-4">
+          <p id="contact" class="address text-center">联系</p>
+        </div>
+        
+        <div class="col-lg-8 col-md-8 col-xs-8">
+          <p><span class="glyphicon glyphicon-envelope"></span> 635859005@qq.com</p>
+          <p><span class="glyphicon glyphicon-earphone"></span> 15521077234</p>
+          <p><span class="glyphicon glyphicon-road"></span> 广州市番禺区市桥街道解放路江丽苑</p>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="col-lg-2 col-md-2 col-xs-12">
+      <p>
+        <!-- 这里定义图片为响应式，并且添加圆角效果，以便保证图片在不同设备上都可以完美显示 //-->
+        <img data-toggle="tooltip" data-placement="left" id="avatar" title="我是展图" class="img-responsive img-rounded" src="myImg-87k.jpg" alt="">
+       </p>
+    </div>
+  </div>
+</div>
+
+<!-- 定义简历的主体部分 //-->
+
+<div class="container">
+  <div class="row cvbody">
+    
+    <!-- 这里定义两个区域，布局定义如下：//-->
+    
+    <div class="col-lg-6 col-md-6 col-xs-12">
+    
+      <div class="row">
+        <div class="cbox green">
+          <h4>个人介绍</h4>
+          <p>
+            本人自认性格开朗、朴实正直，待人热情、真诚，也有很强的组织能力。虽然虽然缺少项目经验，但是本人学习能力不弱，上进心强，勇于挑战自我，做事认真负责，相信也能应对实际工作中的挑战。希望能在工作中学习进步，为公司带来效益的同时也实现人生价值。
+          </p>
+        </div>
+        <div class="cbox red">
+          <h4>个人技能</h4>
+          <p>
+            <!-- 这里使用Bootstrap3的组件添加技能 //-->
+            
+            HTML
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" style="width:80%"></div>
+            </div>
+
+            CSS
+            <div class="progress">
+              <div class="progress-bar progress-bar-primary" style="width:60%"></div>
+            </div>
+            
+            Javascript
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger" style="width:60%"></div>
+            </div>
+
+            Python
+            <div class="progress">
+              <div class="progress-bar progress-bar-info" style="width:50%"></div>
+            </div>
+            
+            Photoshop
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning" style="width:30%"></div>
+            </div>
+          </p>
+        </div>
+        <div class="cbox orange">
+          <h4>语言水平</h4>			
+          <p>
+            </br>
+       			<canvas id="en" width="150" height="150" class="pull-left"></canvas>
+            <canvas id="zh" width="150" height="150" class="pull-left" style="margin-left:18px"></canvas> 
+            <canvas id="can" width="150" height="150" class="pull-right"></canvas>
+           </br>
+           <p class="pull-left" style="margin-left:12%">英语</br>CET6:487</p>
+           <p class="pull-left" style="margin-left:23%">中文</p>
+           <p class="pull-left" style="margin-left:28%">粤语</p>
+           <p class="clearfix"></p>
+          </p>
+        </div>
+      </div>
+    
+    </div>
+    
+    <!-- 为了清楚的分割两个区域，这里我们添加了一个空白区域，或者也可以在CSS中定义Margin实现//-->
+    <div class="col-lg-1 col-md-1 col-xs-12"></div>
+    
+    <div class="col-lg-5 col-md-5 col-xs-12">
+    
+      <div class="row">
+        <div class="bbox">
+          <h4>教育背景</h4></br>
+          <p>2012.9-2016.7 华南师范大学 </br>
+             电子信息工程 全日制 本科</br>
+             主修课程：微机原理、PLC设计、模拟电子电路、通信概论、计算机网络、光纤通信、Java程序设计、模电数电等。</br>
+             已通过大学英语六级</br>
+             毕设题目：基于树莓派B+的家庭环境监测系统研制</br>
+             
+          </p>
+        </div>
+        <div class="bbox">
+          <h4>工作经验</h4></br>
+          <p>2015.6-2015.9 广东移动广州分公司 </br>
+            运营支撑中心</br>
+            负责协助完成后台的运营支撑工作，
+            后来也到金海大厦协助完成物料分配和分管区域营业厅场地监督工作。
+            <HR style="border:1 dashed #987cb9" width="80%" color=#987cb9 SIZE=1>
+            2012.10-2013.9 百胜餐饮集团</br>
+            必胜客</br>
+            后厨兼职
+            </p>
+
+        </div>
+        <div class="bbox">
+          <h4>个人爱好</h4></br>
+            <p>
+              <span class="glyphicon glyphicon-film"></span> 电影&nbsp&nbsp
+              <span class="glyphicon glyphicon-plane"></span> 旅游
+            </p>
+            <p>
+                <span class="glyphicon glyphicon-cutlery"></span> 美食&nbsp&nbsp  
+                <span class="glyphicon glyphicon-music"></span> 音乐  
+            </p>
+            <p>
+                <span class="glyphicon glyphicon-book"></span> 阅读&nbsp&nbsp 
+                <span class="glyphicon glyphicon-tower"></span> 游戏
+            </p>
+        </div>
+      </div>
+    
+    </div>
+    
+    
+  </div>
+</div>
+
+<!-- 定义简历页底 //-->
+<!-- <div class="container">
+  <div class="row"><div class="footer text-center">关注-微博</div></div>
+</div>
+ -->
+<!-- 引入jQuery类库和Bootstrap3的Javascript类库 //-->
+<script type='text/javascript' src="http://libs.baidu.com/jquery/1.11.1/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script>
+/*Javascript源代码*/
+
+$(function(){
+  $('#contact').popover({placement:'bottom', container: 'body', html:true, content:'<p>QQ: 635859005</p><p>微信: d_a_r_k</p>'});
+  $('#avatar').tooltip({'placement':'bottom'});
+  
+	$.getScript('http://www.chartjs.org/assets/Chart.js',function(){
+	  
+    var zhdata = [{
+			label: '中文水平',
+			value: 90,
+			highlight: "#5AD3D1",
+			color: "#4D5360"
+		}, {
+			value: 10,
+			color: "#EEEEEE"
+		}
+		]
+
+		var zhoptions = {
+			animation: true,
+			segmentShowStroke : false
+		};
+
+
+		var c = $('#zh');
+		var ct = c.get(0).getContext('2d');
+		
+		var zhChart = new Chart(ct).Doughnut(zhdata, zhoptions);
+
+
+var candata = [{
+      label: '粤语水平',
+      value: 95,
+      highlight: "#99CCFF",
+      color: "#003366"
+    }, {
+      value: 5,
+      color: "#EEEEEE"
+    }
+    ]
+
+    var canoptions = {
+      animation: true,
+      segmentShowStroke : false
+    };
+
+
+    var c = $('#can');
+    var ct = c.get(0).getContext('2d');
+    
+    var canChart = new Chart(ct).Doughnut(candata, canoptions);
+
+
+
+    var canoptions = {
+      animation: true,
+      segmentShowStroke : false
+    };
+
+	
+	  var endata = [{
+			label: '英文水平',
+			value: 80,
+			highlight: "#99CCFF",
+			color: "#003366"
+		}, {
+        value: 20,
+        color: "#EEEEEE"
+		}
+		]
+
+		var enoptions = {
+			animation: true,
+			segmentShowStroke : false
+		};
+
+		var c = $('#en');
+		var ct = c.get(0).getContext('2d');
+		
+		var enchart = new Chart(ct).Doughnut(endata, enoptions);
+	});
+
+});
+
+</script>
+</body>
+</html>
